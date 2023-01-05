@@ -1,0 +1,5 @@
+[env]
+RUST_LOG = "OFF"
+
+[alias]
+publish-crate = "publish --registry crates-io"

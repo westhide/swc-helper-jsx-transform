@@ -1,0 +1,27 @@
+[package]
+name = "swc-helper-jsx-transform"
+version = "0.1.0"
+description = "SWC helper for jsx transform"
+authors = ["westhide <mr.westhide@gmail.com>"]
+repository = "https://github.com/westhide/swc-helper-jsx-transform.git"
+license = "MIT"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = "symbols"
+
+[dependencies]
+indexmap = { version = "1.9" }
+swc_core = { version = "0.52", features = [
+    "ecma_plugin_transform",
+    "ecma_utils",
+] }
+
+[dev-dependencies]
+testing = "0.31.27"
