@@ -1,0 +1,81 @@
+---
+source: tests/transform.rs
+expression: element.transform()
+---
+Element {
+    tag: Native(
+        "div",
+    ),
+    attrs: [],
+    children: [],
+    raw: JSXElement {
+        span: Span {
+            lo: BytePos(
+                1,
+            ),
+            hi: BytePos(
+                12,
+            ),
+            ctxt: #0,
+        },
+        opening: JSXOpeningElement {
+            name: Ident(
+                Ident {
+                    span: Span {
+                        lo: BytePos(
+                            2,
+                        ),
+                        hi: BytePos(
+                            5,
+                        ),
+                        ctxt: #0,
+                    },
+                    sym: Atom('div' type=static),
+                    optional: false,
+                },
+            ),
+            span: Span {
+                lo: BytePos(
+                    1,
+                ),
+                hi: BytePos(
+                    6,
+                ),
+                ctxt: #0,
+            },
+            attrs: [],
+            self_closing: false,
+            type_args: None,
+        },
+        children: [],
+        closing: Some(
+            JSXClosingElement {
+                span: Span {
+                    lo: BytePos(
+                        6,
+                    ),
+                    hi: BytePos(
+                        12,
+                    ),
+                    ctxt: #0,
+                },
+                name: Ident(
+                    Ident {
+                        span: Span {
+                            lo: BytePos(
+                                8,
+                            ),
+                            hi: BytePos(
+                                11,
+                            ),
+                            ctxt: #0,
+                        },
+                        sym: Atom('div' type=static),
+                        optional: false,
+                    },
+                ),
+            },
+        ),
+    },
+    is_static: true,
+}

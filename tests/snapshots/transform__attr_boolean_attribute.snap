@@ -1,0 +1,134 @@
+---
+source: tests/transform.rs
+expression: element.transform()
+---
+Element {
+    tag: Native(
+        "div",
+    ),
+    attrs: [
+        Attr {
+            key: Attr(
+                "checked",
+            ),
+            value: Lit(
+                Str(
+                    Str {
+                        span: Span {
+                            lo: BytePos(
+                                0,
+                            ),
+                            hi: BytePos(
+                                0,
+                            ),
+                            ctxt: #0,
+                        },
+                        value: Atom('' type=static),
+                        raw: None,
+                    },
+                ),
+            ),
+        },
+    ],
+    children: [],
+    raw: JSXElement {
+        span: Span {
+            lo: BytePos(
+                1,
+            ),
+            hi: BytePos(
+                20,
+            ),
+            ctxt: #0,
+        },
+        opening: JSXOpeningElement {
+            name: Ident(
+                Ident {
+                    span: Span {
+                        lo: BytePos(
+                            2,
+                        ),
+                        hi: BytePos(
+                            5,
+                        ),
+                        ctxt: #0,
+                    },
+                    sym: Atom('div' type=static),
+                    optional: false,
+                },
+            ),
+            span: Span {
+                lo: BytePos(
+                    1,
+                ),
+                hi: BytePos(
+                    14,
+                ),
+                ctxt: #0,
+            },
+            attrs: [
+                JSXAttr(
+                    JSXAttr {
+                        span: Span {
+                            lo: BytePos(
+                                6,
+                            ),
+                            hi: BytePos(
+                                13,
+                            ),
+                            ctxt: #0,
+                        },
+                        name: Ident(
+                            Ident {
+                                span: Span {
+                                    lo: BytePos(
+                                        6,
+                                    ),
+                                    hi: BytePos(
+                                        13,
+                                    ),
+                                    ctxt: #0,
+                                },
+                                sym: Atom('checked' type=inline),
+                                optional: false,
+                            },
+                        ),
+                        value: None,
+                    },
+                ),
+            ],
+            self_closing: false,
+            type_args: None,
+        },
+        children: [],
+        closing: Some(
+            JSXClosingElement {
+                span: Span {
+                    lo: BytePos(
+                        14,
+                    ),
+                    hi: BytePos(
+                        20,
+                    ),
+                    ctxt: #0,
+                },
+                name: Ident(
+                    Ident {
+                        span: Span {
+                            lo: BytePos(
+                                16,
+                            ),
+                            hi: BytePos(
+                                19,
+                            ),
+                            ctxt: #0,
+                        },
+                        sym: Atom('div' type=static),
+                        optional: false,
+                    },
+                ),
+            },
+        ),
+    },
+    is_static: true,
+}

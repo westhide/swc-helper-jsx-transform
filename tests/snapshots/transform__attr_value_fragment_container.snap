@@ -1,0 +1,175 @@
+---
+source: tests/transform.rs
+expression: element.transform()
+---
+Element {
+    tag: Native(
+        "div",
+    ),
+    attrs: [
+        Attr {
+            key: Attr(
+                "fragment",
+            ),
+            value: Fragment(
+                Fragment {
+                    children: [],
+                    is_static: true,
+                },
+            ),
+        },
+    ],
+    children: [],
+    raw: JSXElement {
+        span: Span {
+            lo: BytePos(
+                1,
+            ),
+            hi: BytePos(
+                29,
+            ),
+            ctxt: #0,
+        },
+        opening: JSXOpeningElement {
+            name: Ident(
+                Ident {
+                    span: Span {
+                        lo: BytePos(
+                            2,
+                        ),
+                        hi: BytePos(
+                            5,
+                        ),
+                        ctxt: #0,
+                    },
+                    sym: Atom('div' type=static),
+                    optional: false,
+                },
+            ),
+            span: Span {
+                lo: BytePos(
+                    1,
+                ),
+                hi: BytePos(
+                    23,
+                ),
+                ctxt: #0,
+            },
+            attrs: [
+                JSXAttr(
+                    JSXAttr {
+                        span: Span {
+                            lo: BytePos(
+                                6,
+                            ),
+                            hi: BytePos(
+                                22,
+                            ),
+                            ctxt: #0,
+                        },
+                        name: Ident(
+                            Ident {
+                                span: Span {
+                                    lo: BytePos(
+                                        6,
+                                    ),
+                                    hi: BytePos(
+                                        14,
+                                    ),
+                                    ctxt: #0,
+                                },
+                                sym: Atom('fragment' type=dynamic),
+                                optional: false,
+                            },
+                        ),
+                        value: Some(
+                            JSXExprContainer(
+                                JSXExprContainer {
+                                    span: Span {
+                                        lo: BytePos(
+                                            15,
+                                        ),
+                                        hi: BytePos(
+                                            22,
+                                        ),
+                                        ctxt: #0,
+                                    },
+                                    expr: Expr(
+                                        JSXFragment(
+                                            JSXFragment {
+                                                span: Span {
+                                                    lo: BytePos(
+                                                        16,
+                                                    ),
+                                                    hi: BytePos(
+                                                        21,
+                                                    ),
+                                                    ctxt: #0,
+                                                },
+                                                opening: JSXOpeningFragment {
+                                                    span: Span {
+                                                        lo: BytePos(
+                                                            16,
+                                                        ),
+                                                        hi: BytePos(
+                                                            18,
+                                                        ),
+                                                        ctxt: #0,
+                                                    },
+                                                },
+                                                children: [],
+                                                closing: JSXClosingFragment {
+                                                    span: Span {
+                                                        lo: BytePos(
+                                                            18,
+                                                        ),
+                                                        hi: BytePos(
+                                                            21,
+                                                        ),
+                                                        ctxt: #0,
+                                                    },
+                                                },
+                                            },
+                                        ),
+                                    ),
+                                },
+                            ),
+                        ),
+                    },
+                ),
+            ],
+            self_closing: false,
+            type_args: None,
+        },
+        children: [],
+        closing: Some(
+            JSXClosingElement {
+                span: Span {
+                    lo: BytePos(
+                        23,
+                    ),
+                    hi: BytePos(
+                        29,
+                    ),
+                    ctxt: #0,
+                },
+                name: Ident(
+                    Ident {
+                        span: Span {
+                            lo: BytePos(
+                                25,
+                            ),
+                            hi: BytePos(
+                                28,
+                            ),
+                            ctxt: #0,
+                        },
+                        sym: Atom('div' type=static),
+                        optional: false,
+                    },
+                ),
+            },
+        ),
+    },
+    is_static: false,
+}

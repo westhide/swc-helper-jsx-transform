@@ -1,0 +1,261 @@
+---
+source: tests/transform.rs
+expression: element.transform()
+---
+Element {
+    tag: Native(
+        "div",
+    ),
+    attrs: [
+        Attr {
+            key: Attr(
+                "class",
+            ),
+            value: Const(
+                Array(
+                    ArrayLit {
+                        span: Span {
+                            lo: BytePos(
+                                13,
+                            ),
+                            hi: BytePos(
+                                18,
+                            ),
+                            ctxt: #0,
+                        },
+                        elems: [
+                            Some(
+                                ExprOrSpread {
+                                    spread: None,
+                                    expr: Lit(
+                                        Num(
+                                            Number {
+                                                span: Span {
+                                                    lo: BytePos(
+                                                        14,
+                                                    ),
+                                                    hi: BytePos(
+                                                        15,
+                                                    ),
+                                                    ctxt: #0,
+                                                },
+                                                value: 1.0,
+                                                raw: Some(
+                                                    "1",
+                                                ),
+                                            },
+                                        ),
+                                    ),
+                                },
+                            ),
+                            Some(
+                                ExprOrSpread {
+                                    spread: None,
+                                    expr: Lit(
+                                        Num(
+                                            Number {
+                                                span: Span {
+                                                    lo: BytePos(
+                                                        16,
+                                                    ),
+                                                    hi: BytePos(
+                                                        17,
+                                                    ),
+                                                    ctxt: #0,
+                                                },
+                                                value: 2.0,
+                                                raw: Some(
+                                                    "2",
+                                                ),
+                                            },
+                                        ),
+                                    ),
+                                },
+                            ),
+                        ],
+                    },
+                ),
+            ),
+        },
+    ],
+    children: [],
+    raw: JSXElement {
+        span: Span {
+            lo: BytePos(
+                1,
+            ),
+            hi: BytePos(
+                26,
+            ),
+            ctxt: #0,
+        },
+        opening: JSXOpeningElement {
+            name: Ident(
+                Ident {
+                    span: Span {
+                        lo: BytePos(
+                            2,
+                        ),
+                        hi: BytePos(
+                            5,
+                        ),
+                        ctxt: #0,
+                    },
+                    sym: Atom('div' type=static),
+                    optional: false,
+                },
+            ),
+            span: Span {
+                lo: BytePos(
+                    1,
+                ),
+                hi: BytePos(
+                    20,
+                ),
+                ctxt: #0,
+            },
+            attrs: [
+                JSXAttr(
+                    JSXAttr {
+                        span: Span {
+                            lo: BytePos(
+                                6,
+                            ),
+                            hi: BytePos(
+                                19,
+                            ),
+                            ctxt: #0,
+                        },
+                        name: Ident(
+                            Ident {
+                                span: Span {
+                                    lo: BytePos(
+                                        6,
+                                    ),
+                                    hi: BytePos(
+                                        11,
+                                    ),
+                                    ctxt: #0,
+                                },
+                                sym: Atom('class' type=static),
+                                optional: false,
+                            },
+                        ),
+                        value: Some(
+                            JSXExprContainer(
+                                JSXExprContainer {
+                                    span: Span {
+                                        lo: BytePos(
+                                            12,
+                                        ),
+                                        hi: BytePos(
+                                            19,
+                                        ),
+                                        ctxt: #0,
+                                    },
+                                    expr: Expr(
+                                        Array(
+                                            ArrayLit {
+                                                span: Span {
+                                                    lo: BytePos(
+                                                        13,
+                                                    ),
+                                                    hi: BytePos(
+                                                        18,
+                                                    ),
+                                                    ctxt: #0,
+                                                },
+                                                elems: [
+                                                    Some(
+                                                        ExprOrSpread {
+                                                            spread: None,
+                                                            expr: Lit(
+                                                                Num(
+                                                                    Number {
+                                                                        span: Span {
+                                                                            lo: BytePos(
+                                                                                14,
+                                                                            ),
+                                                                            hi: BytePos(
+                                                                                15,
+                                                                            ),
+                                                                            ctxt: #0,
+                                                                        },
+                                                                        value: 1.0,
+                                                                        raw: Some(
+                                                                            "1",
+                                                                        ),
+                                                                    },
+                                                                ),
+                                                            ),
+                                                        },
+                                                    ),
+                                                    Some(
+                                                        ExprOrSpread {
+                                                            spread: None,
+                                                            expr: Lit(
+                                                                Num(
+                                                                    Number {
+                                                                        span: Span {
+                                                                            lo: BytePos(
+                                                                                16,
+                                                                            ),
+                                                                            hi: BytePos(
+                                                                                17,
+                                                                            ),
+                                                                            ctxt: #0,
+                                                                        },
+                                                                        value: 2.0,
+                                                                        raw: Some(
+                                                                            "2",
+                                                                        ),
+                                                                    },
+                                                                ),
+                                                            ),
+                                                        },
+                                                    ),
+                                                ],
+                                            },
+                                        ),
+                                    ),
+                                },
+                            ),
+                        ),
+                    },
+                ),
+            ],
+            self_closing: false,
+            type_args: None,
+        },
+        children: [],
+        closing: Some(
+            JSXClosingElement {
+                span: Span {
+                    lo: BytePos(
+                        20,
+                    ),
+                    hi: BytePos(
+                        26,
+                    ),
+                    ctxt: #0,
+                },
+                name: Ident(
+                    Ident {
+                        span: Span {
+                            lo: BytePos(
+                                22,
+                            ),
+                            hi: BytePos(
+                                25,
+                            ),
+                            ctxt: #0,
+                        },
+                        sym: Atom('div' type=static),
+                        optional: false,
+                    },
+                ),
+            },
+        ),
+    },
+    is_static: false,
+}

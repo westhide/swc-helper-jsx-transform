@@ -1,0 +1,245 @@
+---
+source: tests/transform.rs
+expression: element.transform()
+---
+Element {
+    tag: Native(
+        "div",
+    ),
+    attrs: [],
+    children: [
+        Text(
+            Text {
+                content: "text1",
+                raw: JSXText {
+                    span: Span {
+                        lo: BytePos(
+                            6,
+                        ),
+                        hi: BytePos(
+                            37,
+                        ),
+                        ctxt: #0,
+                    },
+                    value: "\n\n            text1\n\n            ",
+                    raw: "\n\n            text1\n\n            ",
+                },
+            },
+        ),
+        Element(
+            Element {
+                tag: Native(
+                    "br",
+                ),
+                attrs: [],
+                children: [],
+                raw: JSXElement {
+                    span: Span {
+                        lo: BytePos(
+                            37,
+                        ),
+                        hi: BytePos(
+                            42,
+                        ),
+                        ctxt: #0,
+                    },
+                    opening: JSXOpeningElement {
+                        name: Ident(
+                            Ident {
+                                span: Span {
+                                    lo: BytePos(
+                                        38,
+                                    ),
+                                    hi: BytePos(
+                                        40,
+                                    ),
+                                    ctxt: #0,
+                                },
+                                sym: Atom('br' type=static),
+                                optional: false,
+                            },
+                        ),
+                        span: Span {
+                            lo: BytePos(
+                                37,
+                            ),
+                            hi: BytePos(
+                                42,
+                            ),
+                            ctxt: #0,
+                        },
+                        attrs: [],
+                        self_closing: true,
+                        type_args: None,
+                    },
+                    children: [],
+                    closing: None,
+                },
+                is_static: true,
+            },
+        ),
+        Text(
+            Text {
+                content: "text2",
+                raw: JSXText {
+                    span: Span {
+                        lo: BytePos(
+                            42,
+                        ),
+                        hi: BytePos(
+                            67,
+                        ),
+                        ctxt: #0,
+                    },
+                    value: "\n\n      text2\n\n            ",
+                    raw: "\n\n      text2\n\n            ",
+                },
+            },
+        ),
+    ],
+    raw: JSXElement {
+        span: Span {
+            lo: BytePos(
+                1,
+            ),
+            hi: BytePos(
+                73,
+            ),
+            ctxt: #0,
+        },
+        opening: JSXOpeningElement {
+            name: Ident(
+                Ident {
+                    span: Span {
+                        lo: BytePos(
+                            2,
+                        ),
+                        hi: BytePos(
+                            5,
+                        ),
+                        ctxt: #0,
+                    },
+                    sym: Atom('div' type=static),
+                    optional: false,
+                },
+            ),
+            span: Span {
+                lo: BytePos(
+                    1,
+                ),
+                hi: BytePos(
+                    6,
+                ),
+                ctxt: #0,
+            },
+            attrs: [],
+            self_closing: false,
+            type_args: None,
+        },
+        children: [
+            JSXText(
+                JSXText {
+                    span: Span {
+                        lo: BytePos(
+                            6,
+                        ),
+                        hi: BytePos(
+                            37,
+                        ),
+                        ctxt: #0,
+                    },
+                    value: "\n\n            text1\n\n            ",
+                    raw: "\n\n            text1\n\n            ",
+                },
+            ),
+            JSXElement(
+                JSXElement {
+                    span: Span {
+                        lo: BytePos(
+                            37,
+                        ),
+                        hi: BytePos(
+                            42,
+                        ),
+                        ctxt: #0,
+                    },
+                    opening: JSXOpeningElement {
+                        name: Ident(
+                            Ident {
+                                span: Span {
+                                    lo: BytePos(
+                                        38,
+                                    ),
+                                    hi: BytePos(
+                                        40,
+                                    ),
+                                    ctxt: #0,
+                                },
+                                sym: Atom('br' type=static),
+                                optional: false,
+                            },
+                        ),
+                        span: Span {
+                            lo: BytePos(
+                                37,
+                            ),
+                            hi: BytePos(
+                                42,
+                            ),
+                            ctxt: #0,
+                        },
+                        attrs: [],
+                        self_closing: true,
+                        type_args: None,
+                    },
+                    children: [],
+                    closing: None,
+                },
+            ),
+            JSXText(
+                JSXText {
+                    span: Span {
+                        lo: BytePos(
+                            42,
+                        ),
+                        hi: BytePos(
+                            67,
+                        ),
+                        ctxt: #0,
+                    },
+                    value: "\n\n      text2\n\n            ",
+                    raw: "\n\n      text2\n\n            ",
+                },
+            ),
+        ],
+        closing: Some(
+            JSXClosingElement {
+                span: Span {
+                    lo: BytePos(
+                        67,
+                    ),
+                    hi: BytePos(
+                        73,
+                    ),
+                    ctxt: #0,
+                },
+                name: Ident(
+                    Ident {
+                        span: Span {
+                            lo: BytePos(
+                                69,
+                            ),
+                            hi: BytePos(
+                                72,
+                            ),
+                            ctxt: #0,
+                        },
+                        sym: Atom('div' type=static),
+                        optional: false,
+                    },
+                ),
+            },
+        ),
+    },
+    is_static: true,
+}

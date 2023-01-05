@@ -1,0 +1,81 @@
+---
+source: tests/transform.rs
+expression: element.transform()
+---
+Element {
+    tag: Extra(
+        "tag-custom",
+    ),
+    attrs: [],
+    children: [],
+    raw: JSXElement {
+        span: Span {
+            lo: BytePos(
+                1,
+            ),
+            hi: BytePos(
+                26,
+            ),
+            ctxt: #0,
+        },
+        opening: JSXOpeningElement {
+            name: Ident(
+                Ident {
+                    span: Span {
+                        lo: BytePos(
+                            2,
+                        ),
+                        hi: BytePos(
+                            12,
+                        ),
+                        ctxt: #0,
+                    },
+                    sym: Atom('tag-custom' type=dynamic),
+                    optional: false,
+                },
+            ),
+            span: Span {
+                lo: BytePos(
+                    1,
+                ),
+                hi: BytePos(
+                    13,
+                ),
+                ctxt: #0,
+            },
+            attrs: [],
+            self_closing: false,
+            type_args: None,
+        },
+        children: [],
+        closing: Some(
+            JSXClosingElement {
+                span: Span {
+                    lo: BytePos(
+                        13,
+                    ),
+                    hi: BytePos(
+                        26,
+                    ),
+                    ctxt: #0,
+                },
+                name: Ident(
+                    Ident {
+                        span: Span {
+                            lo: BytePos(
+                                15,
+                            ),
+                            hi: BytePos(
+                                25,
+                            ),
+                            ctxt: #0,
+                        },
+                        sym: Atom('tag-custom' type=dynamic),
+                        optional: false,
+                    },
+                ),
+            },
+        ),
+    },
+    is_static: false,
+}

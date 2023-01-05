@@ -1,0 +1,131 @@
+---
+source: tests/transform.rs
+expression: element.transform()
+---
+Element {
+    tag: Native(
+        "div",
+    ),
+    attrs: [
+        Attr {
+            key: Spread,
+            value: Expr(
+                Ident(
+                    Ident {
+                        span: Span {
+                            lo: BytePos(
+                                10,
+                            ),
+                            hi: BytePos(
+                                16,
+                            ),
+                            ctxt: #0,
+                        },
+                        sym: Atom('spread' type=inline),
+                        optional: false,
+                    },
+                ),
+            ),
+        },
+    ],
+    children: [],
+    raw: JSXElement {
+        span: Span {
+            lo: BytePos(
+                1,
+            ),
+            hi: BytePos(
+                24,
+            ),
+            ctxt: #0,
+        },
+        opening: JSXOpeningElement {
+            name: Ident(
+                Ident {
+                    span: Span {
+                        lo: BytePos(
+                            2,
+                        ),
+                        hi: BytePos(
+                            5,
+                        ),
+                        ctxt: #0,
+                    },
+                    sym: Atom('div' type=static),
+                    optional: false,
+                },
+            ),
+            span: Span {
+                lo: BytePos(
+                    1,
+                ),
+                hi: BytePos(
+                    18,
+                ),
+                ctxt: #0,
+            },
+            attrs: [
+                SpreadElement(
+                    SpreadElement {
+                        dot3_token: Span {
+                            lo: BytePos(
+                                7,
+                            ),
+                            hi: BytePos(
+                                10,
+                            ),
+                            ctxt: #0,
+                        },
+                        expr: Ident(
+                            Ident {
+                                span: Span {
+                                    lo: BytePos(
+                                        10,
+                                    ),
+                                    hi: BytePos(
+                                        16,
+                                    ),
+                                    ctxt: #0,
+                                },
+                                sym: Atom('spread' type=inline),
+                                optional: false,
+                            },
+                        ),
+                    },
+                ),
+            ],
+            self_closing: false,
+            type_args: None,
+        },
+        children: [],
+        closing: Some(
+            JSXClosingElement {
+                span: Span {
+                    lo: BytePos(
+                        18,
+                    ),
+                    hi: BytePos(
+                        24,
+                    ),
+                    ctxt: #0,
+                },
+                name: Ident(
+                    Ident {
+                        span: Span {
+                            lo: BytePos(
+                                20,
+                            ),
+                            hi: BytePos(
+                                23,
+                            ),
+                            ctxt: #0,
+                        },
+                        sym: Atom('div' type=static),
+                        optional: false,
+                    },
+                ),
+            },
+        ),
+    },
+    is_static: false,
+}

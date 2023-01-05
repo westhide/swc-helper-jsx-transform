@@ -1,0 +1,165 @@
+---
+source: tests/transform.rs
+expression: element.transform()
+---
+Element {
+    tag: Native(
+        "div",
+    ),
+    attrs: [
+        Attr {
+            key: Attr(
+                "class",
+            ),
+            value: Const(
+                Ident(
+                    Ident {
+                        span: Span {
+                            lo: BytePos(
+                                13,
+                            ),
+                            hi: BytePos(
+                                22,
+                            ),
+                            ctxt: #0,
+                        },
+                        sym: Atom('undefined' type=static),
+                        optional: false,
+                    },
+                ),
+            ),
+        },
+    ],
+    children: [],
+    raw: JSXElement {
+        span: Span {
+            lo: BytePos(
+                1,
+            ),
+            hi: BytePos(
+                30,
+            ),
+            ctxt: #0,
+        },
+        opening: JSXOpeningElement {
+            name: Ident(
+                Ident {
+                    span: Span {
+                        lo: BytePos(
+                            2,
+                        ),
+                        hi: BytePos(
+                            5,
+                        ),
+                        ctxt: #0,
+                    },
+                    sym: Atom('div' type=static),
+                    optional: false,
+                },
+            ),
+            span: Span {
+                lo: BytePos(
+                    1,
+                ),
+                hi: BytePos(
+                    24,
+                ),
+                ctxt: #0,
+            },
+            attrs: [
+                JSXAttr(
+                    JSXAttr {
+                        span: Span {
+                            lo: BytePos(
+                                6,
+                            ),
+                            hi: BytePos(
+                                23,
+                            ),
+                            ctxt: #0,
+                        },
+                        name: Ident(
+                            Ident {
+                                span: Span {
+                                    lo: BytePos(
+                                        6,
+                                    ),
+                                    hi: BytePos(
+                                        11,
+                                    ),
+                                    ctxt: #0,
+                                },
+                                sym: Atom('class' type=static),
+                                optional: false,
+                            },
+                        ),
+                        value: Some(
+                            JSXExprContainer(
+                                JSXExprContainer {
+                                    span: Span {
+                                        lo: BytePos(
+                                            12,
+                                        ),
+                                        hi: BytePos(
+                                            23,
+                                        ),
+                                        ctxt: #0,
+                                    },
+                                    expr: Expr(
+                                        Ident(
+                                            Ident {
+                                                span: Span {
+                                                    lo: BytePos(
+                                                        13,
+                                                    ),
+                                                    hi: BytePos(
+                                                        22,
+                                                    ),
+                                                    ctxt: #0,
+                                                },
+                                                sym: Atom('undefined' type=static),
+                                                optional: false,
+                                            },
+                                        ),
+                                    ),
+                                },
+                            ),
+                        ),
+                    },
+                ),
+            ],
+            self_closing: false,
+            type_args: None,
+        },
+        children: [],
+        closing: Some(
+            JSXClosingElement {
+                span: Span {
+                    lo: BytePos(
+                        24,
+                    ),
+                    hi: BytePos(
+                        30,
+                    ),
+                    ctxt: #0,
+                },
+                name: Ident(
+                    Ident {
+                        span: Span {
+                            lo: BytePos(
+                                26,
+                            ),
+                            hi: BytePos(
+                                29,
+                            ),
+                            ctxt: #0,
+                        },
+                        sym: Atom('div' type=static),
+                        optional: false,
+                    },
+                ),
+            },
+        ),
+    },
+    is_static: false,
+}
