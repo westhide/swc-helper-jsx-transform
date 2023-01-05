@@ -1,1 +1,1 @@
-# swc-helper-module-import
+# swc-helper-jsx-transform
