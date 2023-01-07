@@ -1,9 +1,6 @@
 use swc_core::ecma::ast::{Expr, JSXElementChild, JSXExpr, JSXExprContainer, JSXSpreadChild};
 
-use crate::{
-    element::Element, fragment::Fragment, shared::Transform, text::Text,
-    utils::emit_code::emit_code,
-};
+use crate::{element::Element, fragment::Fragment, shared::Transform, text::Text};
 
 #[derive(Debug)]
 pub enum VNode<'a> {
@@ -27,9 +24,9 @@ impl<'a> VNode<'a> {
     pub fn static_content(&self) -> String {
         match self {
             Self::Text(text) => text.content.clone(),
-            Self::Element(element) => emit_code(element.raw),
+            Self::Element(element) => element.static_content(),
             Self::Fragment(fragment) => fragment.static_content(),
-            _ => panic!("Forbidden: Get Dynamic VNode static_content"),
+            _ => panic!("Forbidden: get non static VNode content"),
         }
     }
 }

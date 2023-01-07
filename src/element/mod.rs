@@ -1,6 +1,8 @@
 use swc_core::ecma::ast::JSXElement;
 
-use crate::{attr::Attr, element::tag::Tag, shared::Transform, vnode::VNode};
+use crate::{
+    attr::Attr, element::tag::Tag, shared::Transform, utils::emit_code::emit_code, vnode::VNode,
+};
 
 pub mod tag;
 
@@ -12,6 +14,16 @@ pub struct Element<'a> {
 
     pub raw: &'a JSXElement,
     pub is_static: bool,
+}
+
+impl<'a> Element<'a> {
+    pub fn static_content(&self) -> String {
+        if self.is_static {
+            emit_code(self.raw)
+        } else {
+            panic!("Forbidden: get non static  content")
+        }
+    }
 }
 
 impl<'a> Transform<'a, Element<'a>> for JSXElement {

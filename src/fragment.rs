@@ -11,7 +11,11 @@ pub struct Fragment<'a> {
 
 impl<'a> Fragment<'a> {
     pub fn static_content(&self) -> String {
-        self.children.iter().map(VNode::static_content).collect()
+        if self.is_static {
+            self.children.iter().map(VNode::static_content).collect()
+        } else {
+            panic!("Forbidden: get non static Fragment content")
+        }
     }
 }
 
