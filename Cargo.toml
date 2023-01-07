@@ -29,5 +29,5 @@ swc_core = { version = "0.52", features = [
 ] }
 
 [dev-dependencies]
-testing = "0.31.27"
-insta = "1.24.1"
+testing = "0.31.28"
+insta = "1.26.0"
