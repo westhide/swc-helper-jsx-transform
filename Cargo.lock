@@ -1346,7 +1346,7 @@ dependencies = [
 
 [[package]]
 name = "swc-helper-jsx-transform"
-version = "0.1.1"
+version = "0.1.2"
 dependencies = [
  "indexmap",
  "insta",
