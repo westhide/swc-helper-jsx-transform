@@ -4,7 +4,19 @@ expression: element.transform()
 ---
 Element {
     tag: Extra(
-        "tag-custom",
+        Ident {
+            span: Span {
+                lo: BytePos(
+                    2,
+                ),
+                hi: BytePos(
+                    12,
+                ),
+                ctxt: #0,
+            },
+            sym: Atom('tag-custom' type=dynamic),
+            optional: false,
+        },
     ),
     attrs: [],
     children: [],

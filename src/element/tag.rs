@@ -1,4 +1,4 @@
-use swc_core::ecma::ast::{JSXElementName, JSXMemberExpr};
+use swc_core::ecma::ast::{Ident, JSXElementName, JSXMemberExpr};
 
 use crate::{shared::Transform, utils::is::is_native_tag};
 
@@ -6,7 +6,7 @@ use crate::{shared::Transform, utils::is::is_native_tag};
 pub enum Tag<'a> {
     Native(&'a str),
     /// Component or Custom element
-    Extra(&'a str),
+    Extra(&'a Ident),
     Member(&'a JSXMemberExpr),
 }
 
@@ -19,12 +19,8 @@ impl<'a> Tag<'a> {
 impl<'a> Transform<'a, Tag<'a>> for JSXElementName {
     fn transform(&'a self) -> Tag<'a> {
         match self {
-            JSXElementName::Ident(ident) => {
-                match ident.as_ref() {
-                    name if is_native_tag(name) => Tag::Native(name),
-                    name => Tag::Extra(name),
-                }
-            },
+            JSXElementName::Ident(ident) if is_native_tag(&ident.sym) => Tag::Native(&ident.sym),
+            JSXElementName::Ident(ident) => Tag::Extra(ident),
             JSXElementName::JSXMemberExpr(member) => Tag::Member(member),
             JSXElementName::JSXNamespacedName(_) => {
                 panic!("Non support: JSXNamespacedName Element")

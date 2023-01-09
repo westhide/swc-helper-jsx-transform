@@ -4,7 +4,19 @@ expression: element.transform()
 ---
 Element {
     tag: Extra(
-        "A",
+        Ident {
+            span: Span {
+                lo: BytePos(
+                    2,
+                ),
+                hi: BytePos(
+                    3,
+                ),
+                ctxt: #0,
+            },
+            sym: Atom('A' type=inline),
+            optional: false,
+        },
     ),
     attrs: [],
     children: [],
