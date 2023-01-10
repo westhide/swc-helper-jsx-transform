@@ -1,6 +1,6 @@
 [package]
 name = "swc-helper-jsx-transform"
-version = "0.1.2"
+version = "0.1.3"
 description = "SWC helper for jsx transform"
 authors = ["westhide <mr.westhide@gmail.com>"]
 repository = "https://github.com/westhide/swc-helper-jsx-transform.git"
