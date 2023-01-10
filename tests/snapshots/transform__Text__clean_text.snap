@@ -14,15 +14,15 @@ Element {
                 raw: JSXText {
                     span: Span {
                         lo: BytePos(
-                            6,
+                            19,
                         ),
                         hi: BytePos(
-                            37,
+                            52,
                         ),
                         ctxt: #0,
                     },
-                    value: "\n\n            text1\n\n            ",
-                    raw: "\n\n            text1\n\n            ",
+                    value: "\n\n             text1\n\n             ",
+                    raw: "\n\n             text1\n\n             ",
                 },
             },
         ),
@@ -36,10 +36,10 @@ Element {
                 raw: JSXElement {
                     span: Span {
                         lo: BytePos(
-                            37,
+                            52,
                         ),
                         hi: BytePos(
-                            42,
+                            57,
                         ),
                         ctxt: #0,
                     },
@@ -48,10 +48,10 @@ Element {
                             Ident {
                                 span: Span {
                                     lo: BytePos(
-                                        38,
+                                        53,
                                     ),
                                     hi: BytePos(
-                                        40,
+                                        55,
                                     ),
                                     ctxt: #0,
                                 },
@@ -61,10 +61,10 @@ Element {
                         ),
                         span: Span {
                             lo: BytePos(
-                                37,
+                                52,
                             ),
                             hi: BytePos(
-                                42,
+                                57,
                             ),
                             ctxt: #0,
                         },
@@ -84,15 +84,15 @@ Element {
                 raw: JSXText {
                     span: Span {
                         lo: BytePos(
-                            42,
+                            57,
                         ),
                         hi: BytePos(
-                            67,
+                            84,
                         ),
                         ctxt: #0,
                     },
-                    value: "\n\n      text2\n\n            ",
-                    raw: "\n\n      text2\n\n            ",
+                    value: "\n\n       text2\n\n             ",
+                    raw: "\n\n       text2\n\n             ",
                 },
             },
         ),
@@ -100,10 +100,10 @@ Element {
     raw: JSXElement {
         span: Span {
             lo: BytePos(
-                1,
+                14,
             ),
             hi: BytePos(
-                73,
+                90,
             ),
             ctxt: #0,
         },
@@ -112,10 +112,10 @@ Element {
                 Ident {
                     span: Span {
                         lo: BytePos(
-                            2,
+                            15,
                         ),
                         hi: BytePos(
-                            5,
+                            18,
                         ),
                         ctxt: #0,
                     },
@@ -125,10 +125,10 @@ Element {
             ),
             span: Span {
                 lo: BytePos(
-                    1,
+                    14,
                 ),
                 hi: BytePos(
-                    6,
+                    19,
                 ),
                 ctxt: #0,
             },
@@ -141,25 +141,25 @@ Element {
                 JSXText {
                     span: Span {
                         lo: BytePos(
-                            6,
+                            19,
                         ),
                         hi: BytePos(
-                            37,
+                            52,
                         ),
                         ctxt: #0,
                     },
-                    value: "\n\n            text1\n\n            ",
-                    raw: "\n\n            text1\n\n            ",
+                    value: "\n\n             text1\n\n             ",
+                    raw: "\n\n             text1\n\n             ",
                 },
             ),
             JSXElement(
                 JSXElement {
                     span: Span {
                         lo: BytePos(
-                            37,
+                            52,
                         ),
                         hi: BytePos(
-                            42,
+                            57,
                         ),
                         ctxt: #0,
                     },
@@ -168,10 +168,10 @@ Element {
                             Ident {
                                 span: Span {
                                     lo: BytePos(
-                                        38,
+                                        53,
                                     ),
                                     hi: BytePos(
-                                        40,
+                                        55,
                                     ),
                                     ctxt: #0,
                                 },
@@ -181,10 +181,10 @@ Element {
                         ),
                         span: Span {
                             lo: BytePos(
-                                37,
+                                52,
                             ),
                             hi: BytePos(
-                                42,
+                                57,
                             ),
                             ctxt: #0,
                         },
@@ -200,15 +200,15 @@ Element {
                 JSXText {
                     span: Span {
                         lo: BytePos(
-                            42,
+                            57,
                         ),
                         hi: BytePos(
-                            67,
+                            84,
                         ),
                         ctxt: #0,
                     },
-                    value: "\n\n      text2\n\n            ",
-                    raw: "\n\n      text2\n\n            ",
+                    value: "\n\n       text2\n\n             ",
+                    raw: "\n\n       text2\n\n             ",
                 },
             ),
         ],
@@ -216,10 +216,10 @@ Element {
             JSXClosingElement {
                 span: Span {
                     lo: BytePos(
-                        67,
+                        84,
                     ),
                     hi: BytePos(
-                        73,
+                        90,
                     ),
                     ctxt: #0,
                 },
@@ -227,10 +227,10 @@ Element {
                     Ident {
                         span: Span {
                             lo: BytePos(
-                                69,
+                                86,
                             ),
                             hi: BytePos(
-                                72,
+                                89,
                             ),
                             ctxt: #0,
                         },

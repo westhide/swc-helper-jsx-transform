@@ -14,10 +14,10 @@ Fragment {
                 raw: JSXElement {
                     span: Span {
                         lo: BytePos(
-                            15,
+                            27,
                         ),
                         hi: BytePos(
-                            26,
+                            38,
                         ),
                         ctxt: #0,
                     },
@@ -26,10 +26,10 @@ Fragment {
                             Ident {
                                 span: Span {
                                     lo: BytePos(
-                                        16,
+                                        28,
                                     ),
                                     hi: BytePos(
-                                        19,
+                                        31,
                                     ),
                                     ctxt: #0,
                                 },
@@ -39,10 +39,10 @@ Fragment {
                         ),
                         span: Span {
                             lo: BytePos(
-                                15,
+                                27,
                             ),
                             hi: BytePos(
-                                20,
+                                32,
                             ),
                             ctxt: #0,
                         },
@@ -55,10 +55,10 @@ Fragment {
                         JSXClosingElement {
                             span: Span {
                                 lo: BytePos(
-                                    20,
+                                    32,
                                 ),
                                 hi: BytePos(
-                                    26,
+                                    38,
                                 ),
                                 ctxt: #0,
                             },
@@ -66,10 +66,10 @@ Fragment {
                                 Ident {
                                     span: Span {
                                         lo: BytePos(
-                                            22,
+                                            34,
                                         ),
                                         hi: BytePos(
-                                            25,
+                                            37,
                                         ),
                                         ctxt: #0,
                                     },
@@ -93,10 +93,10 @@ Fragment {
                 raw: JSXElement {
                     span: Span {
                         lo: BytePos(
-                            33,
+                            51,
                         ),
                         hi: BytePos(
-                            44,
+                            62,
                         ),
                         ctxt: #0,
                     },
@@ -105,10 +105,10 @@ Fragment {
                             Ident {
                                 span: Span {
                                     lo: BytePos(
-                                        34,
+                                        52,
                                     ),
                                     hi: BytePos(
-                                        37,
+                                        55,
                                     ),
                                     ctxt: #0,
                                 },
@@ -118,10 +118,10 @@ Fragment {
                         ),
                         span: Span {
                             lo: BytePos(
-                                33,
+                                51,
                             ),
                             hi: BytePos(
-                                38,
+                                56,
                             ),
                             ctxt: #0,
                         },
@@ -134,10 +134,10 @@ Fragment {
                         JSXClosingElement {
                             span: Span {
                                 lo: BytePos(
-                                    38,
+                                    56,
                                 ),
                                 hi: BytePos(
-                                    44,
+                                    62,
                                 ),
                                 ctxt: #0,
                             },
@@ -145,10 +145,10 @@ Fragment {
                                 Ident {
                                     span: Span {
                                         lo: BytePos(
-                                            40,
+                                            58,
                                         ),
                                         hi: BytePos(
-                                            43,
+                                            61,
                                         ),
                                         ctxt: #0,
                                     },

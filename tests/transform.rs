@@ -3,7 +3,7 @@
 
 use insta::assert_debug_snapshot;
 use swc_core::ecma::{
-    ast::Expr,
+    ast::{JSXElement, JSXFragment},
     parser::{Syntax, TsConfig},
     transforms::testing::Tester,
     visit::{as_folder, VisitMut},
@@ -19,7 +19,7 @@ const TSX_SYNTAX: Syntax = Syntax::Typescript(TsConfig {
 
 macro_rules! snapshot {
     ($name:ident, $value:expr) => {
-        assert_debug_snapshot!(stringify!($name), $value)
+        assert_debug_snapshot!(stringify!($name), $value.transform())
     };
 }
 
@@ -30,16 +30,12 @@ macro_rules! test {
             struct TransformVisitor;
 
             impl VisitMut for TransformVisitor {
-                fn visit_mut_expr(&mut self, expr: &mut Expr) {
-                    match expr {
-                        Expr::JSXElement(box element) => {
-                            snapshot!($name, element.transform())
-                        },
-                        Expr::JSXFragment(fragment) => {
-                            snapshot!($name, fragment.transform())
-                        },
-                        _ => {},
-                    }
+                fn visit_mut_jsx_element(&mut self, element: &mut JSXElement) {
+                    snapshot!($name, element)
+                }
+
+                fn visit_mut_jsx_fragment(&mut self, fragment: &mut JSXFragment) {
+                    snapshot!($name, fragment)
                 }
             }
 
@@ -48,69 +44,75 @@ macro_rules! test {
             });
         }
     };
+
+    ($($name:ident : $src:literal),+ $(,)?) => {
+        $(test!($name,$src);)+
+    };
+
+    ($($mod:ident: {
+        $($name:ident : $src:literal),+ $(,)?
+    }),+ $(,)?) => {
+        $(
+        #[allow(non_snake_case)]
+        mod $mod {
+            use super::*;
+            $(test!($name,$src);)+
+        }
+        )+
+    };
 }
 
-test!(tag_native_div, r#"<div></div>"#);
-test!(tag_extra_component, r#"<A></A>"#);
-test!(tag_extra_custom, r#"<tag-custom></tag-custom>"#);
-test!(tag_extra_member, r#"<A.b></A.b>"#);
+test!(
 
-test!(attr_key_attr, r#"<div class="cls"></div>"#);
-test!(attr_key_event_prefix_on, r#"<div onClick="()=>{}"></div>"#);
-test!(
-    attr_key_event_namespace_on,
-    r#"<div on:click="()=>{}"></div>"#
-);
-test!(attr_key_namespace_attr, r#"<div ns:name="value"></div>"#);
+    Tag:{
+         native_div: r#"<div></div>"#,
+         extra_component: r#"<A></A>"#,
+         extra_custom: r#"<tag-custom></tag-custom>"#,
+         extra_member: r#"<A.b></A.b>"#,
+    },
+    AttrKey:{
+        attr: r#"<div class="cls"></div>"#,
+        event_prefix: r#"<div onClick="()=>{}"></div>"#,
+        event_namespace: r#"<div on:click="()=>{}"></div>"#,
+        namespace_attr: r#"<div ns:name="value"></div>"#,
+        spread: r#"<div {...spread}></div>"#,
+    },
+    AttrValue:{
+        lit: r#"<div class="1"></div>"#,
+        const_undefined: r#"<div class={undefined}></div>"#,
+        const_array: r#"<div class={[1,2]}></div>"#,
+        const_obj: r#"<div class={{a:1}}></div>"#,
+        expr: r#"<div class={a}></div>"#,
+        element: r#"<div element=<div></div>></div>"#,
+        element_container: r#"<div element={<div></div>}></div>"#,
+        fragment: r#"<div fragment=<></>></div>"#,
+        fragment_container: r#"<div fragment={<></>}></div>"#,
+        empty: r#"<div class></div>"#,
+        boolean_attribute: r#"<div checked></div>"#,
+    },
 
-test!(attr_value_lit, r#"<div class="1"></div>"#);
-test!(
-    attr_value_const_undefined,
-    r#"<div class={undefined}></div>"#
-);
-test!(attr_value_const_array, r#"<div class={[1,2]}></div>"#);
-test!(attr_value_const_obj, r#"<div class={{a:1}}></div>"#);
-test!(attr_value_expr, r#"<div class={a}></div>"#);
-test!(attr_value_element, r#"<div element=<div></div>></div>"#);
-test!(
-    attr_value_element_container,
-    r#"<div element={<div></div>}></div>"#
-);
-test!(attr_value_fragment, r#"<div fragment=<></>></div>"#);
-test!(
-    attr_value_fragment_container,
-    r#"<div fragment={<></>}></div>"#
-);
-test!(attr_value_empty, r#"<div class></div>"#);
-
-test!(attr_spread, r#"<div {...spread}></div>"#);
-test!(attr_boolean_attribute, r#"<div checked></div>"#);
-
-test!(
-    element_is_static,
-    r#"
-    <div class="cls1" style="background-color: red;">
-      <div id="firstChild"></div>
-    </div>
-    "#
-);
-
-test!(
-    fragment_with_children,
-    r#"
-    <>
-      <div></div>
-      <div></div>
-    </>
-    "#
-);
-
-test!(
-    text_clean,
-    r#"<div>
-            text1
-            <br/>
-      text2
-            </div>
-    "#
+    Element:{
+        is_static: r#"
+          <div class="cls1" style="background-color: red;">
+            <div id="firstChild"></div>
+          </div>
+        "#,
+    },
+    Fragment:{
+        children: r#"
+          <>
+            <div></div>
+            <div></div>
+          </>
+        "#,
+    },
+    Text:{
+        clean_text:r#"
+            <div>
+             text1
+             <br/>
+       text2
+             </div>
+        "#,
+    },
 );
